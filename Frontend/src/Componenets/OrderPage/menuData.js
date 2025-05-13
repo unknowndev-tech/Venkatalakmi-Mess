@@ -5,7 +5,7 @@ export const menuCategories = [
   { id: 'menu-starters', title: 'Sweets', icon: 'bi-egg-fried' },
   { id: 'menu-breakfast', title: 'Breakfast', icon: 'bi-cup-hot' },
   { id: 'menu-lunch', title: 'Lunch', icon: 'bi-cup-straw' },
-  { id: 'menu-dinner', title: 'Dinner', icon: 'bi-palette' }
+  { id: 'menu-dinner', title: 'Snacks', icon: 'bi-palette' }
 ];
 
 // Base menu items organized by category
@@ -16,6 +16,7 @@ export const baseMenuItems = {
           "name": "Godambi Barfi(ಗೋದಂಬಿ ಬರ್ಫಿ)",
           "description": "Cashew nut-based, diamond-shaped fudge with a smooth texture.",
           "price": 17,
+           "unit": "per dozen",
           "img": "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/sweets%20-2%2Fkaju-katli.webp?alt=media&token=b1639539-d433-400a-b9e7-682764d5153f",
           "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
         },
@@ -54,7 +55,7 @@ export const baseMenuItems = {
         },
          {
       "id": 6,
-      "name": "Mysore Park(ಮೈಸೂರು ಪಾಕ್)",
+      "name": "Mysore Pak(ಮೈಸೂರು ಪಾಕ್)",
       "description": "A rich, ghee-filled, gram flour-based sweet from Mysore.",
       "price": 17,
       "img": "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/sweets%20-2%2Fmysorepark.webp?alt=media&token=547d5d0d-4f65-46a9-a62b-f9178df7c2d5",
@@ -260,6 +261,7 @@ export const baseMenuItems = {
     "name": "Rave Holige( ರವೆ ಹೊಳಿಗೆ)",
     "description": "Combo of twelve types of holige flavors.",
     "price": 17,
+     "unit": "per kg",
     "img": "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Sweets%203%2FRave%20Holige.jpg?alt=media&token=bc0df5e5-2ad6-4442-b130-81711c7fe188",
     "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
   },
@@ -485,25 +487,31 @@ export const baseMenuItems = {
 //     }
   ],
   'menu-breakfast': [
-    { id: 1, name: "Idli Vada", description: "Toasted bread with fresh tomatoes, garlic, basil, and olive oil", price: 35, img: "idlivada.png", days: ['Monday', 'Thursday'] },
-    { id: 2, name: "Dosa", description: "Lightly breaded squid served with marinara sauce", price: 35, img: "Dosa.jpg", days: ['Tuesday', 'Saturday'] },
-    { id: 3, name: "Pulav", description: "Fresh mozzarella, tomatoes, and basil with balsamic glaze", price: 35, img: "pulav.jpg", days: ['Wednesday', 'Sunday'] },
-    { id: 4, name: "Poori", description: "Mushroom caps filled with seasoned breadcrumbs and cheese", price: 30, img: "pori.jpg", days: ['Thursday', 'Tuesday'] },
-    { id: 5, name: "Upitu", description: "Chilled jumbo shrimp with zesty cocktail sauce", price: 40, img: "upitu.jpg", days: ['Friday', 'Monday'] },
-    { id: 6, name: "Setdosa", description: "Creamy dip with spinach, artichokes, and melted cheese", price: 40, img: "setdosa.jpg", days: ['Saturday', 'Sunday'] },
+      { id: 1, name: "Idli Vada", description: "Toasted bread with fresh tomatoes, garlic, basil, and olive oil", price: 40, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Breakfast%2Fidlivada.png?alt=media&token=8f7f0758-4187-4f4c-8178-7fc66b520625", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
+    { id: 2, name: "Idli(ಇಡ್ಲಿ)", description: "One plate of idli contains 3 idlis, served with chutney and sambar", price: 40, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Breakfast%2Fidli.webp?alt=media&token=75ca7045-7e93-4fd8-920d-c1e705ead301", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
+    { id: 3, name: "Vada(ವಡಾ)", description: "A crispy, fried lentil doughnut-like snack, often served with chutneyand Sambar.", price: 35, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Breakfast%2FVada.jpeg?alt=media&token=e97ef510-e991-4c6b-9575-724943cbb67e", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
+    { id: 4, name: "Buns(ಬನ್ಸ್)", description: "Soft, round bread rolls, commonly enjoyed as a snack or with meals.", price: 30, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Breakfast%2FBuns.jpg?alt=media&token=9ee14da0-c4e8-4947-bf5d-bb43f37e5101", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
+     { id: 6, name: "Avalaki(ಅವಲಕ್ಕಿ)", description: " A savory dish made from flattened rice cooked with spices and vegetables.", price: 25, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Breakfast%2FAvalaki.jpg?alt=media&token=84fc56f5-4fd5-48d1-a9c4-5fc8c0c22dbf", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
+    { id: 5, name: "Upitu(ಉಪಿಟ್ಟು)", description: "Chilled jumbo shrimp with zesty cocktail sauce", price: 25, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Breakfast%2Fupitu.jpg?alt=media&token=3beff09d-0546-43f6-9eeb-02d323152be1", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
+    { id: 6, name: "Kesari Bath(ಕೇಸರಿಬಾತ್)", description: " A sweet, rich semolina dessert flavored with ghee, saffron, and cardamom.", price: 25, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Breakfast%2FKesari%20Bath.jpg?alt=media&token=3c3ac7c0-e019-4dbc-8b6c-3c5fedc5f368", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
+   
   ],
   'menu-lunch': [
-    { id: 14, name: "Turkey Club Sandwich", description: "Triple-decker with turkey, bacon, lettuce, and tomato", price: 1200, img: "Dosa.jpg", days: ['Monday', 'Friday'] },
-    { id: 15, name: "Panner Manchuri", description: "Arborio rice slowly cooked with wild mushrooms and parmesan", price: 10, img: "pori.jpg", days: ['Monday', 'Sunday'] },
-    { id: 16, name: "Idli Vada", description: "Tomatoes, cucumber, olives, feta, and red onion with oregano", price: 35, img: "idlivada.png", days: ['Sunday'] },
+    { id: 14, name: "Simple Meal( ಸಿಂಪಲ್ ಮೀಲ್)", description: "Simple meal: Served with salt, pickle chutney, vegetable curry, rice, sambar, curry, fried snack, payasa , and buttermilk.", price: 80, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Meal%2Fsimple%20Meal%201.webp?alt=media&token=a743c15b-57d1-41ec-80a2-d1658dc0276c", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
+    { id: 15, name: "Sweat Meal(ಸ್ವೀಟ್ ಮೀಲ್)", description: "Served with salt, pickle chutney, vegetable curry, rice, sambar, curry, fried snack, payasa, buttermilk, and sweet.", price: 99, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Meal%2FSweet%20Meal.jpg?alt=media&token=4e5dd84d-0c23-4a85-bd73-2d09af9ea9b6", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
+    { id: 16, name: "Special Meal(ಸ್ಪೆಷಲ್ ಮೀಲ್) ", description: "Special meal: Served with salt, pickle chutney, vegetable curry, rice, sambar, curry, fried snack, payasa (sweet dish), buttermilk, sweet, and one special item.", price: 150, img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Meal%2FSpecial%20meal.avif?alt=media&token=1ff54b27-8fec-44f9-811d-c47d49fcb646", days: ['Monday','Tuesday','Wednesday','Thursday' ,'Friday','Saturday','Sunday'] },
   ],
   'menu-dinner': [
-    { id: 1, name: "Idli Vada", description: "Toasted bread with fresh tomatoes, garlic, basil, and olive oil", price: 35, img: "idlivada.png", days: ['Monday', 'Thursday'] },
-    { id: 2, name: "Dosa", description: "Lightly breaded squid served with marinara sauce", price: 35, img: "Dosa.jpg", days: ['Tuesday', 'Saturday'] },
-    { id: 3, name: "Pulav", description: "Fresh mozzarella, tomatoes, and basil with balsamic glaze", price: 35, img: "pulav.jpg", days: ['Wednesday', 'Sunday'] },
-    { id: 4, name: "Poori", description: "Mushroom caps filled with seasoned breadcrumbs and cheese", price: 30, img: "pori.jpg", days: ['Thursday', 'Tuesday'] },
-    { id: 5, name: "Upitu", description: "Chilled jumbo shrimp with zesty cocktail sauce", price: 40, img: "upitu.jpg", days: ['Friday', 'Monday'] },
-    { id: 6, name: "Setdosa", description: "Creamy dip with spinach, artichokes, and melted cheese", price: 40, img: "setdosa.jpg", days: ['Saturday', 'Sunday'] },
+   { id: 1, name: "Chakuli(ಚಕ್ಕುಲಿ)", description: "Toasted bread with fresh tomatoes, garlic, basil, and olive oil", price: 50,  "unit": "per pack", img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Snacks%2FChakkuli.jpg?alt=media&token=a9dc90cf-5ebc-4e2f-bfe1-d283d1427841",
+     days: ['Monday','Tuesday', 'Wednesday','Thursday','Friday','Saturday','Sunday'] },
+    { id: 2, name: "Jolladh mixture(ಜೋಳದ ಮಿಕ್ಸ್ಚರ್)", description: "Jolladh mixture is a spicy and crunchy snack made from puffed jowar (sorghum) mixed , peanuts, and spices.", price: 340,"unit": "per kg", img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Snacks%2FJolladh%20Mixture.jpg?alt=media&token=c57c7b9e-1e9c-4e03-8f5b-dc4d146dfa4a", days: ['Monday','Tuesday', 'Wednesday','Thursday','Friday','Saturday','Sunday'] },
+    { id: 3, name: "Rich Mixture(ರಿಚ್ ಮಿಕ್ಸ್ಚರ್)", description: "Rich Mixture is a premium, flavorful Indian snack made with a variety of fried ingredients like sev, boondi, nuts, curry leaves, and spices.", price: 410,"unit": "per kg", img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Snacks%2FRich%20Mixture.webp?alt=media&token=03307189-c990-4a41-b53b-c42d13e8ccdf", days: ['Monday','Tuesday', 'Wednesday','Thursday','Friday','Saturday','Sunday'] },
+    { id: 4, name: "Thengoli(ತೆಂಗೋಳಿ)", description: "Mushroom caps filled with seasoned breadcrumbs and cheese", price: 50,"unit": "per pack", img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Snacks%2FThenglu.png?alt=media&token=4c87d032-50fb-41c4-b207-0b1ead5240d8", days: ['Thursday', 'Tuesday'] },
+    { id: 5, name: "Bene Murka(ಬೆನೆ ಮುರ್ಕಾ)", description: "Chilled jumbo shrimp with zesty cocktail sauce", price: 60,"unit": "per pack", img: "upitu.jpg", days: ['Friday', 'Monday'] },
+    { id: 6, name: "Kodubele(ಕೊಡುಬೇಲೆ )", description: "is a traditional South Indian snack made from rice flour and black gram flour, deep-fried into crispy, ring-shaped delights, often flavored with spices.", price: 50,"unit": "per pack", img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Snacks%2FKodu%20Bele.jpg?alt=media&token=ef166b76-e8ce-4ca8-b171-cd7f63964897", days: ['Monday','Tuesday', 'Wednesday','Thursday','Friday','Saturday','Sunday'] },
+     { id: 7, name: "Shankar Pali ( ಶಂಕರ ಪಲಿ)", description: "Shankar Pali is a crispy, sweet and savory snack made from wheat flour, sugar, and ghee, often flavored with cardamom and deep-fried.", price: 60,"unit": "per pack", img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Snacks%2FSHankar%20Palli.jpg?alt=media&token=f8e5c7b1-3b04-4f86-bdc6-da778ad4c4fd", days: ['Monday','Tuesday', 'Wednesday','Thursday','Friday','Saturday','Sunday'] },
+      { id: 8, name: "Kara Godambi(ಕಾರಾ ಗೋಡಂಬಿ )", description: "is a savory snack made from roasted wheat or rice flour, seasoned with spices, and deep-fried until crispy.", price: 95,"unit": "per pack", img: "https://firebasestorage.googleapis.com/v0/b/authentication-5c66e.appspot.com/o/Snacks%2FKara%20Godambi.jpg?alt=media&token=9cd59263-c913-46d9-8471-e14b7aa025a9", days: ['Monday','Tuesday', 'Wednesday','Thursday','Friday','Saturday','Sunday'] },
+
   ],
 };
 
@@ -512,7 +520,7 @@ export const categoryAvailabilityTimes = {
   'menu-starters': { available: true, message: 'Available 24/7' },
   'menu-breakfast': { 
     start: 5, // 5:00 AM
-    end: 11,  // 11:00 AM
+    end: 13,  // 11:00 AM
     message: 'Available 5:00 AM - 11:00 AM'
   },
   'menu-lunch': { 
@@ -539,7 +547,7 @@ export const getAvailableCategories = () => {
   let available = ['menu-starters']; 
   
   // Morning (5am-11am): Breakfast is available
-  if (currentHour >= 5 && currentHour < 11) {
+  if (currentHour >= 5 && currentHour < 13) {
     available.push('menu-breakfast');
   } 
   // Afternoon (11am-5pm): Lunch is available
@@ -579,7 +587,7 @@ export const getCurrentTimeInfo = () => {
   } else if (hours >= 11 && hours < 17) {
     timeMessage = 'Lunch time';
   } else {
-    timeMessage = 'Dinner time';
+    timeMessage = 'Dinner ';
   }
   
   return { time: formattedTime, message: timeMessage };

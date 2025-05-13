@@ -137,32 +137,39 @@ const CartPage = () => {
   };
 
   const handleQuantityChange = (itemId, action) => {
-    setCart(prevCart => {
-      const updatedCart = [...prevCart];
-      const itemIndex = updatedCart.findIndex(item => item.id === itemId);
-      
-      if (itemIndex === -1) return updatedCart;
-      
-      if (action === 'add') {
+  setCart(prevCart => {
+    const updatedCart = [...prevCart];
+    const itemIndex = updatedCart.findIndex(item => item.id === itemId);
+
+    if (itemIndex === -1) return updatedCart;
+
+    const item = updatedCart[itemIndex];
+    const isSweetsCategory = true; // or use item.category === 'menu-starters' if category exists
+    const increment = 10;
+    const minQuantity = 50;
+
+    if (action === 'add') {
+      updatedCart[itemIndex] = {
+        ...item,
+        quantity: item.quantity + increment
+      };
+    } else if (action === 'subtract') {
+      const newQuantity = item.quantity - increment;
+      if (newQuantity < minQuantity) {
+        // Remove item from cart if below 50
+        updatedCart.splice(itemIndex, 1);
+      } else {
         updatedCart[itemIndex] = {
-          ...updatedCart[itemIndex],
-          quantity: updatedCart[itemIndex].quantity + 1
+          ...item,
+          quantity: newQuantity
         };
-      } else if (action === 'subtract') {
-        if (updatedCart[itemIndex].quantity > 1) {
-          updatedCart[itemIndex] = {
-            ...updatedCart[itemIndex],
-            quantity: updatedCart[itemIndex].quantity - 1
-          };
-        } else {
-          updatedCart.splice(itemIndex, 1);
-        }
       }
-      
-      return updatedCart;
-    });
-  };
-  
+    }
+
+    return updatedCart;
+  });
+};
+
   const removeFromCart = (itemId) => {
     setCart(prevCart => prevCart.filter(item => item.id !== itemId));
   };

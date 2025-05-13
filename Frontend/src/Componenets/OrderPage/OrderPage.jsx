@@ -402,8 +402,8 @@ const OrderPage = () => {
             <i className="bi bi-arrow-left"></i>  <AiOutlineArrowLeft /> Back to Menu
           </button>
           <h1>Order Your Food</h1>
-          <p>Current time: {timeInfo.time} - {timeInfo.message}</p>
-          <p>Today's {currentDayOfWeek} Special Menu</p>
+          {/* <p>Current time: {timeInfo.time} - {timeInfo.message}</p>
+          <p>Today's {currentDayOfWeek} Special Menu</p> */}
           {/* <p><strong>Starters available 24/7!</strong></p> */}
         </div>
         
@@ -488,7 +488,7 @@ const OrderPage = () => {
 
 
                               <p className="ingredients">{item.description}</p>
-                              <p className="price">₹{item.price} {isSweetsCategory && '(per piece)'}</p>
+                            <p className="price">₹{item.price} {item.unit && `(${item.unit})`}</p>
                               
                               <div className="order-actions">
                                 {quantity > 0 ? (
